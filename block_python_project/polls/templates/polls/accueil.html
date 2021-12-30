@@ -1,19 +1,59 @@
 <!DOCTYPE html>
+<!-----HTML made using nicepage.com----->
+{% load static %}
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="keywords" content="Project Python for Data Analysis, Page blocks classifiication">
+        <meta name="description" content="">
+        <meta name="page_type" content="np-template-header-footer-from-plugin">
         <title>Accueil</title>
+            <link rel="stylesheet" href="{% static 'nicepage.css'%}" media="screen">
+        <link rel="stylesheet" href="{% static 'Accueil.css'%}" media="screen">
+        <script class="u-script" type="text/javascript" src="{% static 'jquery-1.9.1.min.js'%}" defer=""></script>
+        <script class="u-script" type="text/javascript" src="{% static 'nicepage.js'%}" defer=""></script>
+        <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+        <script type="application/ld+json">{
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": ""
+        }</script>
+        <meta name="theme-color" content="#478ac9">
+        <meta property="og:title" content="Accueil">
+        <meta property="og:type" content="website">
     </head>
     <body>
-        <h1>Projet Python</h1>
-        <p>Block Classification</p>
-
-        </br>
-        <p>Dylan RAKOTOARIVELO</p>
-        <p>Yanis RABIA</p>
-
-        <a href="/../test/">
-            <input type="button" value="Prédire un Bloc">
-        </a>
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="1920" data-image-height="1080" id="sec-f6a9">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-title u-text-1">Project Python for Data Analysis</h1>
+        <p class="u-align-center u-small-text u-text u-text-variant u-text-2">Dylan RAKOTOARIVELO - Yanis RABIA</p>
+        <div class="u-border-3 u-border-white u-line u-line-horizontal u-line-1"></div>
+        <h2 class="u-subtitle u-text u-text-3">Page blocks classifiication</h2>
+        <p class="u-align-justify u-large-text u-text u-text-variant u-text-4">The problem consists in classifying all the blocks of the page layout of a document that has been detected by a segmentation process.<br>This is an essential step in document analysis in order to separate text from graphic areas.&nbsp;<br>
+          <br>There are five classes :<br>
+        </p>
+        <ol class="u-align-justify u-large-text u-text u-text-variant u-text-5">
+          <li>
+            <span style="font-weight: 700;">text</span>
+          </li>
+          <li>
+            <span style="font-weight: 700;">horizontal line</span>
+          </li>
+          <li>
+            <span style="font-weight: 700;"> picture</span>
+          </li>
+          <li>
+            <span style="font-weight: 700;">vertical line<span style="font-weight: 700;"></span>
+            </span>
+          </li>
+          <li>
+            <span style="font-weight: 700;">graphic</span>
+          </li>
+        </ol>
+          <p class="u-align-left u-text u-text-6"> The dataset used for our model can be found <a href="https://archive.ics.uci.edu/ml/datasets/Page+Blocks+Classification">here</a></p>
+        <a href="/../test/" class="u-border-2 u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-custom-color-1 u-hover-custom-color-2 u-radius-6 u-btn-1">Predict a block</a>
+      </div>
+    </section>
     </body>
 </html>
