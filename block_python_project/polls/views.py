@@ -1,0 +1,26 @@
+from django.shortcuts import render, redirect
+from polls.forms import BlockForm
+from polls.block_ml import *
+
+def accueil(request):
+    return render(request,
+                  'polls/accueil.html')
+
+def test(request):
+    form = BlockForm()
+    return render(request,
+                  'polls/test.html',
+                  {'form': form})
+
+def result(request):
+    if request.method != 'POST':
+        return redirect('test')
+    form = BlockForm(request.POST)
+    if not form.is_valid():
+        return redirect('test')
+    y_value = target(request)
+    return render(request,
+                  'polls/result.html',
+                  {'values': y_value})
+
+

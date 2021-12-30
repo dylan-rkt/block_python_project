@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <p>Nous sommes là pour vous aider.</p>
+
+    <form action="/../result/" method="post" novalidate>
+        {% csrf_token %} <!-- Pour éviter de faire els input un par un -->
+        {{ form.as_p }}
+        <input type="submit" value="Envoyer">
+    </form>
+
+</body>
+</html>
