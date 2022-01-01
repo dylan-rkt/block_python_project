@@ -19,11 +19,10 @@ def to_x_values(request):
     wb_trans = int(values['wb_trans'])
     area = height * length
     eccen = length / height
-    p_black = blackpix / area
     p_and = blackand / area
     mean_tr = blackpix / wb_trans
 
-    return scaler.transform([[height, length, area, eccen, p_black, p_and, mean_tr, blackpix, blackand, wb_trans]])
+    return scaler.transform([[height, length, area, eccen, p_and, mean_tr, blackand, wb_trans]])
 
 def init_model():
     global rfc
@@ -34,11 +33,13 @@ def init_model():
     data.columns = columns
     labels = data['class']
 
+    data = data[['height','length','area','eccen','p_and','mean_tr','blackand','wb_trans','class']]
+
     scaler = StandardScaler()
     scaler.fit(data[data.columns[:-1]])
     data_scaled = scaler.transform(data[data.columns[:-1]])
     data_scaled = pd.DataFrame(data_scaled)
-    data_scaled.columns = columns[:-1]
+    data_scaled.columns = ['height','length','area','eccen','p_and','mean_tr','blackand','wb_trans']
     data_scaled['class'] = data['class']
 
     x = data_scaled[data_scaled.columns[:-1]]
@@ -50,6 +51,14 @@ def init_model():
     rfc.fit(x_train, y_train)
 
 def predict_class(x_values):
-    return rfc.predict(x_values)
+    y_pred = rfc.predict(x_values)
+    classes = {
+               1: 'Text',
+               2: 'Horizontal Line',
+               3: 'Picture',
+               4: 'Vertical Line',
+               5: 'Graphic'
+              }
+    return classes[y_pred[0]]
 
 
