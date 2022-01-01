@@ -30,7 +30,7 @@ To start the API, follow these steps:
 - Download the project
 - Open a command prompt at the project location "block_python_project\block_python_project"
 - Activate the virtual environment by typing "venv\Scripts\activate"
-- Type "python manage.py runserver" to start the DJango
+- Type "python manage.py runserver" to run the API
 - Open any browser
-- Enter URL "http://127.0.0.1:8000/"
+- Enter URL "http://127.0.0.1:8000/" to access to the API
 
