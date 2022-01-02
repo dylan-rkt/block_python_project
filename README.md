@@ -28,7 +28,7 @@ Therefore, we have integrated our model to an API with DJango, which implements 
 
 To start the API, follow these steps:
 
-- Make sure you have Python 3.8 and pip
+- Make sure you have Python 3.8 and pip in Path
 - Download the GIT project
 - Open a command prompt at the project location "block_python_project\block_python_project"
 - Install the library by typing "pip3 install -r requirements.txt"
