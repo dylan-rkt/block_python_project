@@ -14,10 +14,10 @@ def parametersForm(request):
 
 def result(request):
     if request.method != 'POST':
-        return redirect('test')
+        return redirect('parametersForm')
     form = BlockForm(request.POST)
     if not form.is_valid():
-        return redirect('test')
+        return redirect('parametersForm')
     y_value = target(request)
     return render(request,
                   'polls/result.html',
