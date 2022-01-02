@@ -6,10 +6,10 @@ def accueil(request):
     return render(request,
                   'polls/accueil.html')
 
-def test(request):
+def parametersForm(request):
     form = BlockForm()
     return render(request,
-                  'polls/test.html',
+                  'polls/parametersForm.html',
                   {'form': form})
 
 def result(request):

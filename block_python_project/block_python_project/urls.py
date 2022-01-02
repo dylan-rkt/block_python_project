@@ -20,6 +20,6 @@ from polls import views
 urlpatterns = [
     path('', views.accueil),
     path('admin/', admin.site.urls),
-    path('test/', views.test, name='test'),
+    path('parametersForm/', views.parametersForm, name='parametersForm'),
     path('result/', views.result, name='result')
 ]
